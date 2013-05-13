@@ -1,4 +1,7 @@
 WorthyCrossbow::Application.routes.draw do
+  resources :data
+  match '/all' => 'data#index'
+  root :to => 'home#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
